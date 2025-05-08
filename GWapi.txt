@@ -1,0 +1,2 @@
+postgress api for quote page = "http://localhost:8076/quote/save_policy"
+for Gudeware api for quote page= "http://48.216.233.53:8071/quote/submissions"

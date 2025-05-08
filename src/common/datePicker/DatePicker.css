@@ -1,0 +1,11 @@
+ 
+  .date-input {
+    display: var(--sd-m3-light-input-datepicker-display);
+    width: var(--sd-m3-light-input-datepicker-width);
+    height: var(--sd-m3-light-input-datepicker-height);
+    flex-direction: var(--sd-m3-light-input-datepicker-flex-direction);
+    align-items:  var(--sd-m3-light-input-datepicker-align-items);
+    flex-shrink: var(--sd-m3-light-input-datepicker-flex-shrink);
+    border-radius: var(--sd-m3-light-input-datepicker-border-radius);
+  }
+  

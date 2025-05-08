@@ -1,0 +1,25 @@
+{
+ "title": "Your Quote.",
+ "subTitle": "We offer below package for a Business Owners Policy.",
+ "fields": [
+   {
+      "Business Owners Policy - Job Status": "Quoted",
+      "Organization of Service": "USAA SBI",
+      "Primary Insured": "USAA test",
+      "Term Type" : "Annual",
+      "Quote Type": "Full Application",
+      "Total Premium": "532.00 USD",
+     "component": "Card"
+   }
+ ],
+   "buttons": [
+      {
+        "variant": "outline",
+        "label": "Back",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleBack"
+      }
+    ]
+  }
+

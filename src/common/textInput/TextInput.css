@@ -1,0 +1,30 @@
+.text-input-wrapper {
+  margin-bottom: var(--sd-spacing-5);
+}
+
+.text-input-label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.text-input-required {
+  color: var(--sd-content-error);
+}
+
+.text-input-field {
+  width: 100%;
+  padding: var(--sd-spacing-2) var(--sd-spacing-3);
+  border: 1px solid var(--sd-border-color-default);
+  border-radius: var(--sd-radius-1);
+  box-sizing: border-box;
+}
+
+.text-input-field.text-input-error {
+  border-color: var(--sd-content-error);
+}
+
+.text-input-error-message {
+  color: var(--sd-content-error);
+  font-size: var(--sd-font-size-0);
+  margin-top: 4px;
+}

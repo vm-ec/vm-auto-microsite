@@ -1,0 +1,22 @@
+.header {
+    background-color: var(--sd-partner-header-bg);
+    color: #FFF;
+    padding: 10px 15%;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 1000;
+    /* border: 1px solid var(--sd-partner-header-bg);
+    box-shadow: 0 1px 2px var(--sd-border-color-default); */
+  }
+
+  .logo {
+    background-image: var(--sd-partner-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: var(--sd-partner-logo-width);
+    height: var(--sd-partner-logo-height);
+  }
+  

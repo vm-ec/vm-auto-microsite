@@ -1,0 +1,30 @@
+{
+    "title": "Let's build your profile.",
+    "subTitle": "Creating a profile will help us give you a more accurate quote.",
+    "fields": [
+      {
+        "label": "Select your business type",
+        "value": "",
+        "name": "businessType",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Table",
+        "options": [],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        },
+        "optionsAPI": "http://localhost:8075/get_about_business"
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Next",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleNext"
+      }
+    ]
+  }
+  

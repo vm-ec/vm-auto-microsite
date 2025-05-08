@@ -1,0 +1,67 @@
+.text, p {
+    font: var(--sd-paragraph-regular);
+  }
+  
+  /* Variants */
+  .text-body {
+    font-size: 1rem;
+  }
+  
+  .text-caption {
+    font-size: 0.875rem;
+  }
+  
+  .text-overline {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  
+  /* Sizes */
+  .text-small {
+    font-size: 0.875rem;
+  }
+  
+  .text-medium {
+    font-size: 1rem;
+  }
+  
+  .text-large {
+    font-size: 1.25rem;
+  }
+  
+  /* Weights */
+  .text-light {
+    font-weight: 300;
+  }
+  
+  .text-normal {
+    font: var(--sd-link-l1-regular);
+  }
+  
+  .text-bold, strong{
+    font: var(--sd-paragraph-bold);
+  }
+  
+  /* Colors */
+  .text-primary {
+    color: var(--sd-content-primary);
+  }
+  
+  .text-secondary {
+    color: var(--sd-content-secondary);
+  }
+  
+  .text-tertiary {
+    color: var(--sd-content-tertiary);
+  }
+  
+  del {
+    text-decoration:line-through;
+  }
+  small {
+    zoom: 0.9;
+  }
+  mark{
+    background: var(--sd-bg-primary);
+    padding: var(--sd-spacing-1) var(--sd-spacing-2);
+  }

@@ -1,0 +1,782 @@
+{
+  "2": [
+    {
+      "label": "Telangata",
+      "value": "TG",
+      "id": "57fc"
+    },
+    {
+      "label": "Tamilnadu",
+      "value": "TN",
+      "id": "32ee"
+    },
+    {
+      "label": "Karnataka",
+      "value": "KA",
+      "id": "7153"
+    }
+  ],
+  "75001": {
+    "status": true
+  },
+  "91711": {
+    "status": false,
+    "errorMsg": "API Driven Error Message"
+  },
+  "US": [
+    {
+      "label": "TX",
+      "value": "TX",
+      "id": "9fc6"
+    },
+    {
+      "label": "Alaska",
+      "value": "AK",
+      "id": "2971"
+    },
+    {
+      "label": "Arizona",
+      "value": "AR",
+      "id": "70de"
+    }
+  ],
+  "business-owners-policy": [
+    {
+      "id": "1",
+      "name": "IndustrySelection",
+      "endpoint": "/IndustrySelectionModel"
+    },
+    {
+      "id": "2",
+      "name": "AboutBusiness",
+      "endpoint": "/AboutBusinessModel"
+    },
+    {
+      "id": "3",
+      "name": "UWQuestions",
+      "endpoint": "UWQuestionsModel"
+    },
+    {
+      "id": "4",
+      "name": "Quote",
+      "endpoint": "http://48.216.233.53:8071/quote/submissions"
+    }
+  ],
+  "vehicle-brand": [
+    {
+      "id": "1",
+      "name": "IndustrySelection",
+      "endpoint": "/IndustrySelectionModel"
+    },{
+      "id": "2",
+      "name": "AboutBusiness",
+      "endpoint": "/AboutBusinessModel"
+    },
+    {
+      "id": "3",
+      "name": "UWQuestions",
+      "endpoint": "UWQuestionsModel"
+    },
+    {
+      "id": "4",
+      "name": "Quote",
+      "endpoint": "http://48.216.233.53:8071/quote/submissions"
+    }
+  ],
+  "general-liability": [
+    {
+      "id": "1",
+      "name": "personalInformationModel",
+      "endpoint": "/personalInformationModel"
+    },
+    {
+      "id": "2",
+      "name": "AboutBusiness",
+      "endpoint": "/AboutBusinessModel"
+    },
+    {
+      "id": "3",
+      "name": "UWQuestions",
+      "endpoint": "UWQuestionsModel"
+    },
+    {
+      "id": "4",
+      "name": "Quote",
+      "endpoint": "http://48.216.233.53:8071/quote/submissions"
+    }
+  ],
+  "IndustrySelectionModel": {
+    "title": "",
+    "subTitle": "",
+    "fields": [
+      {
+        "label": "Select your business type",
+        "value": "",
+        "name": "businessType",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Table",
+        "options": [],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      }
+    ],
+    "buttons": [
+    ]
+  },
+  "IndustryTypes": [
+    {
+      "label": "Accounts",
+      "value": "accounts",
+      "id": "6f72"
+    },
+    {
+      "label": "Retail",
+      "value": "retail",
+      "id": "ef3a"
+    },
+    {
+      "label": "Contractor",
+      "value": "contractor",
+      "id": "3c89"
+    },
+    {
+      "label": "Music Store",
+      "value": "musicStore",
+      "id": "1d2b"
+    }
+  ],
+  "AboutBusinessModel": {
+    "title": "Tell us about your business.",
+    "fields": [
+      {
+        "label": "How's your business structured?",
+        "value": "",
+        "name": "businessStructure",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Select",
+        "options": [],
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        },
+        "optionsAPI": "/BusinessTypes"
+      },
+      {
+        "label": "Is your business run out of your home?",
+        "value": "",
+        "name": "BusinessFromHome",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      },
+      {
+        "label": "Street Address",
+        "value": "",
+        "name": "addressLine1",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          },
+          "minLength": {
+            "value": 5,
+            "errorMessage": "Length should be at least 5 characters."
+          },
+          "maxLength": {
+            "value": 20,
+            "errorMessage": "Length should be less than 20 characters"
+          }
+        }
+      },
+      {
+        "label": "Suite or unit number",
+        "value": "",
+        "name": "addressLine2",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,#]",
+        "palceholder": "",
+        "component": "TextInput",
+        "width": 4
+      },
+      {
+        "label": "City",
+        "value": "",
+        "name": "city",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        },
+        "width": 4
+      },
+      {
+        "label": "Zip Code",
+        "value": "",
+        "name": "zipCode",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          },
+          "regexPattern": {
+            "value": "^\\d{5}(?:[-\\s]\\d{4})?$",
+            "errorMessage": "please enter valid Zipcode"
+          }
+        },
+        "width": 4
+      },
+      {
+        "label": "Country",
+        "value": "",
+        "name": "country",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Select",
+        "options": [],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        },
+        "optionsAPI": "/countries",
+        "width": 6
+      },
+      {
+        "label": "State",
+        "value": "",
+        "name": "state",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Select",
+        "dependentOn": "country",
+        "options": [],
+        "width": 6,
+        "optionsAPI": "/:country",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "What's the approximate square footage of your office or workspace?",
+        "value": "",
+        "name": "space",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      },
+      {
+        "label": "How many business locations do you own or rent?",
+        "value": "",
+        "name": "branches",
+        "isValid": true,
+        "allowedFormat": "[0-9]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      },
+      {
+        "label": "First and Last Name",
+        "value": "",
+        "name": "userName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "What's your expected annual revenue?",
+        "value": "",
+        "type": "number",
+        "name": "annualRevenue",
+        "isValid": true,
+        "allowedFormat": "[0-9']",
+        "palceholder": "ex:$100",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      },
+      {
+        "label": "What's the estimated annual payroll for your business?",
+        "value": "",
+        "type": "number",
+        "name": "annualPayroll",
+        "isValid": true,
+        "allowedFormat": "[0-9]",
+        "palceholder": "ex:$100",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      },
+      {
+        "label": "How many employees do you have?",
+        "value": "",
+        "type": "number",
+        "name": "employeeCount",
+        "isValid": true,
+        "allowedFormat": "[0-9]",
+        "palceholder": "ex:5",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true,
+            "errorMessage": "Required."
+          }
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "variant": "outline",
+        "label": "Back",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleBack"
+      },
+      {
+        "label": "Next",
+        "color": "primary",
+        "className": "space-3 space-right-0",
+        "onClickHandler": "handleNext"
+      }
+    ],
+    "externalValidation": {
+      "endpoint": "/:zipCode",
+      "inputParams": [
+        "zipCode"
+      ],
+      "expectedOutput": true
+    }
+  },
+  "BusinessTypes": [
+    {
+      "label": "Sole Proprietorship",
+      "value": "Sole Proprietorship",
+      "id": "9a10"
+    },
+    {
+      "label": "Partnership",
+      "value": "Partnership",
+      "id": "102f"
+    },
+    {
+      "label": "Limited Partnership",
+      "value": "Limited Partnership",
+      "id": "c12c"
+    },
+    {
+      "label": "Limited Liability Partnership",
+      "value": "Limited Liability Partnership",
+      "id": "7227"
+    }
+  ],
+  "UWQuestionsModel": {
+    "title": "Let's get more information.",
+    "fields": [
+      {
+        "label": "When do you want to start your policy?",
+        "value": "",
+        "name": "effectiveDate",
+        "isValid": true,
+        "type": "date",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Do you, or will you at any time, subcontract any work or hire independent contractors?",
+        "value": "",
+        "name": "BOPHireContractor",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Within the past five years, have you experienced more than one loss or claim involving your business or involving your business’ property, or was the payment of any claim or requested damage over $5,000?",
+        "value": "",
+        "name": "BOPLossesinFiveYears",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Do owners and all employees live and work in the US and adhere to you & your company’s written policies, procedures, and expectations regarding hiring practices and duties?",
+        "value": "",
+        "name": "BOPAdhertoPolicies",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "What type of construction is the building?",
+        "value": "",
+        "name": "BOPTypeofBuilding",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Select",
+        "options": [
+          {
+            "label": "Frames Construction",
+            "value": "framesConstruction"
+          },
+          {
+            "label": "Joised masonry",
+            "value": "joisedMasonry"
+          },
+          {
+            "label": "Fire Resistive",
+            "value": "fireResistive"
+          },
+          {
+            "label": "Noncumbistible",
+            "value": "noncumbistible"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Does the building have an automatic sprinkler system?",
+        "value": "",
+        "name": "BOPSprinkerSystem",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes",
+            "childQuestion": {
+              "label": "Who is the manufacturer of the automatic sprinkler system?",
+              "value": "",
+              "name": "oemsprinkler",
+              "isValid": true,
+              "component": "TextInput",
+              "validationRules": {
+                "required": {
+                  "value": true
+                }
+              }
+            }
+          },
+          {
+            "label": "No",
+            "value": "No",
+            "childQuestion": {
+              "label": "Do you have plans to setup an automatic sprinkler system?",
+              "value": "",
+              "name": "haveSprinkler",
+              "isValid": true,
+              "palceholder": "Website Name",
+              "component": "Radio",
+              "options": [
+                {
+                  "label": "Yes",
+                  "value": "Yes",
+                  "childQuestion": {
+                    "label": "Expected Installation Date?",
+                    "value": "",
+                    "name": "installationDate",
+                    "isValid": true,
+                    "type": "date",
+                    "component": "TextInput",
+                    "validationRules": {
+                      "required": {
+                        "value": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "label": "No",
+                  "value": "No"
+                }
+              ],
+              "validationRules": {
+                "required": {
+                  "value": true
+                }
+              }
+            }
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Does your business have a website?",
+        "value": "",
+        "name": "BOPWebsite",
+        "isValid": true,
+        "palceholder": "",
+        "component": "Radio",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes",
+            "childQuestion": {
+              "label": "Enter your website name",
+              "value": "",
+              "name": "BOPWebsiteName",
+              "isValid": true,
+              "palceholder": "Website Name",
+              "component": "TextInput",
+              "validationRules": {
+                "required": {
+                  "value": true
+                }
+              }
+            }
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ],
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "variant": "outline",
+        "label": "Back",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleBack"
+      },
+      {
+        "label": "Submit",
+        "color": "primary",
+        "className": "space-3 space-right-0",
+        "onClickHandler": "handleNext"
+      }
+    ]
+  },
+  "QuotesMockModel": {
+    "item": {
+      "title": "Your Quote.",
+      "subTitle": "We offer below package for a Business Owners Policy.",
+      "fields": [
+        {
+          "component": "Card"
+        }
+      ],
+      "buttons": [
+        {
+          "label": "Home",
+          "color": "primary",
+          "className": "space-3 space-right-0",
+          "onClickHandler": "getHome"
+        }
+      ]
+    }
+  },
+  "personalInformationModel": {
+    "title": "Tell us about your Personal Details.",
+    "fields": [
+      {
+        "label": "First Name",
+        "value": "",
+        "name": "firstName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Middle Name",
+        "value": "",
+        "name": "middleName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,#]",
+        "palceholder": "",
+        "component": "TextInput"
+      },
+      {
+        "label": "Last Name",
+        "value": "",
+        "name": "lastName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,#]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Phone Number",
+        "value": "",
+        "name": "phonenumber",
+        "isValid": true,
+        "allowedFormat": "[0-9]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Email",
+        "value": "",
+        "name": "email",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z.]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Next",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleNext"
+      }
+    ]
+  },
+  "countries": [
+    {
+      "label": "US",
+      "value": "US",
+      "id": "1162"
+    },
+    {
+      "label": "India",
+      "value": "2",
+      "id": "8951"
+    }
+  ]
+}

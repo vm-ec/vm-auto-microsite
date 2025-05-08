@@ -1,0 +1,35 @@
+.radio-sec {
+  margin-bottom: var(--sd-spacing-5);
+  position: relative;
+}
+.radio {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .radio-sec input{
+    width: auto !important;
+  }
+  .radio-sec label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .radio.disabled {
+    color: #f0f0f0;
+  }
+  .radio-button label {
+    display: inline;
+  }
+  input[type=radio] {
+    accent-color: var(--sd-color-primary-500);
+    /* position: absolute;
+    opacity: 0; */
+}
+/* input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--sd-color-primary-500);
+  border-radius: 50%;
+} */

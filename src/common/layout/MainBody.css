@@ -1,0 +1,17 @@
+.content {
+    flex: 1;
+    padding: 20px;
+    margin-top: 50px; /* Adjust to account for the fixed header */
+    margin-bottom: 50px; /* Adjust to account for the fixed footer */
+    transition: margin-left 0.3s ease;
+    overflow-y: auto;
+  }
+  
+  .content.collapsed {
+    margin-left: 60px;
+  }
+  
+  .content.expanded {
+    /* margin-left: 250px; */
+  }
+  

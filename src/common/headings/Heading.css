@@ -1,0 +1,37 @@
+/* Add your custom styles for headings here */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0px;
+    /* line-height: 150%; */
+    /* font-weight: var(--sd-font-weights-heading-bold);
+    line-height: var(--sd-line-heights-heading); */
+  }
+  
+  h1, .h1 {
+    /* font-size: var(--sd-font-sizes-h1); */
+    font: var(--sd-heading-h1-bold);
+  }
+  
+  h2, .h2 {
+    font: var(--sd-heading-h2-bold)
+  }
+  
+  h3, .h3 {
+    font: var(--sd-heading-h3-bold)
+  }
+  
+  h4, .h4 {
+    font: var(--sd-heading-h4-bold);
+    /* line-height: 60px; */
+  }
+  
+  h5, .h5 {
+    font: var(--sd-heading-h5-bold)
+  }
+  
+  h6, .h6 {
+    font: var(--sd-heading-h6-bold);
+    /* line-height: 40px; */
+   
+  }
+  

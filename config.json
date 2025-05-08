@@ -1,0 +1,22 @@
+{
+  "source": ["public/theme/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "css",
+      "prefix": "sd",
+      "buildPath": "src/build/css/",
+      "files": [{
+        "destination": "_variables.css",
+        "format": "css/variables"
+      }]
+    },
+    "android": {
+      "transforms": ["attribute/cti",  "color/hex", "size/remToSp", "size/remToDp"],
+      "buildPath": "src/build/android/src/main/res/values/",
+      "files": [{
+        "destination": "style_dictionary_colors.xml",
+        "format": "android/colors"
+      }]
+    }
+  }
+}

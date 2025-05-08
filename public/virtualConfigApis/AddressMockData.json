@@ -1,0 +1,58 @@
+[
+    {
+        "streetAddress": "1515 N New Hope Rd",
+        "suiteOrUnitNumber": null,
+        "city": "Dardanelle",
+        "state": "Arkansas",
+        "postalCode": "72834",
+        "squareFootage": 567
+    },
+    {
+        "streetAddress": "123 Elm St",
+        "suiteOrUnitNumber": "Suite 101",
+        "city": "Springfield",
+        "state": "Illinois",
+        "postalCode": "62701",
+        "squareFootage": 1000
+    },
+    {
+        "streetAddress": "456 Oak Ave",
+        "suiteOrUnitNumber": null,
+        "city": "Austin",
+        "state": "Texas",
+        "postalCode": "73301",
+        "squareFootage": 800
+    },
+    {
+        "streetAddress": "789 Maple Dr",
+        "suiteOrUnitNumber": "Unit 4B",
+        "city": "Denver",
+        "state": "Colorado",
+        "postalCode": "80202",
+        "squareFootage": 1500
+    },
+    {
+        "streetAddress": "101 Pine St",
+        "suiteOrUnitNumber": null,
+        "city": "San Francisco",
+        "state": "California",
+        "postalCode": "94102",
+        "squareFootage": 600
+    },
+    {
+        "streetAddress": "202 Birch Ln",
+        "suiteOrUnitNumber": "Apt 5A",
+        "city": "Seattle",
+        "state": "Washington",
+        "postalCode": "98101",
+        "squareFootage": 900
+    },
+    {
+        "streetAddress": "303 Cedar Blvd",
+        "suiteOrUnitNumber": null,
+        "city": "Miami",
+        "state": "Florida",
+        "postalCode": "33101",
+        "squareFootage": 1200
+    }
+]
