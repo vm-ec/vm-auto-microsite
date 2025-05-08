@@ -106,8 +106,8 @@
     }
   ],
   "IndustrySelectionModel": {
-    "title": "",
-    "subTitle": "",
+    "title": "Let's build your profile.",
+    "subTitle": "Get list of makes and models from API.",
     "fields": [
       {
         "label": "Select your business type",

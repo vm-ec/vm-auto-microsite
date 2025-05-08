@@ -3,7 +3,7 @@
     flex-direction: column;
     position: relative;
     height: calc(100vh - 70px); /* Subtract the height of the header */
-    width: 100vw;
+    width: 97vw;
     font-family: 'Arial', sans-serif;
     background-color: #F1F5F9;
     overflow: auto;
@@ -45,10 +45,11 @@
   }
   
   /* Content layout */
-  .content {
+  .contentTab {
     display: flex;
     flex: 1;
     overflow: hidden;
+    margin: 15px;
   }
   
   /* Sidebar styling */

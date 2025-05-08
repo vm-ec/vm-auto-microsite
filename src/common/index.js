@@ -11,3 +11,4 @@ export {default as Select} from './selectInput/SelectInput';
 export {default as Text} from './text/Text';
 export {default as TextInput} from './textInput/TextInput';
 export {default as Table} from './tableView/Table';
+export {default as ApiTabs} from './tableView/APITABS'

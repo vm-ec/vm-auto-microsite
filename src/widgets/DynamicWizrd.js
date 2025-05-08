@@ -3,8 +3,7 @@ import { validateFormFieldsNewMethod } from 'custom-claims';
 import { getRequest,validateFormFields } from 'sdk-library';
 
 import _ from 'lodash';
-import { TextInput, Select, Button, Heading, Text, CheckBox, Card, RadioButton, Alert, Row, Col, Table } from '../common';
-import APITabs from 'common/tableView/APITABS';
+import { TextInput, Select, Button, Heading, Text, CheckBox, Card, RadioButton, Alert, Row, Col, Table, ApiTabs } from '../common';
 
 
 const DynamicWizrd = ({ getPreviousWidget, getNextWidget, workFlowData, activeWidget,resp,getInitialWidget }) => {
@@ -105,8 +104,8 @@ const DynamicWizrd = ({ getPreviousWidget, getNextWidget, workFlowData, activeWi
             <section className='step-info'>
                 <Row>
                     <Col>
-                        {/* <Heading level={4}>{stepInfo.title}</Heading>
-                        <Text weight='bold' color="primary">{stepInfo.subTitle}</Text> */}
+                        <Heading level={4}>{stepInfo.title}</Heading>
+                        <Text weight='bold' color="primary">{stepInfo.subTitle}</Text>
                     </Col>
                 </Row>
             </section>
@@ -238,7 +237,7 @@ const InputField = ({ field, onChange }) => {
         case 'Card':
             return <Card {...field} />;
         case 'Table':
-            return <APITabs {...field} onChange = {handleChange} />;
+            return <ApiTabs {...field} onChange = {handleChange} />;
         default:
             return <TextInput {...field} value={value} onChange={handleChange} />;
     }

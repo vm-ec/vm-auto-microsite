@@ -123,12 +123,12 @@
 }
 
 .product-form {
-  padding: 0 ;
+  /* padding: 0 30% ; */
 }
 .step-form {
-  padding-top: 0;
+  padding-top: 30px;
 }
-/* .step-info {
+.step-info {
   padding-top: 0px;
   padding-bottom: 30px;
-} */
+}
