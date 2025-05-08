@@ -1,73 +1,97 @@
 /* Table container styling */
 .table-container {
   padding: 0;
-  background-color: #F1F5F9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-
+  background-color: #FFFFFF; /* Pure white background */
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Deeper, softer shadow */
+  /* margin: 20px 0; */
+  transition: all 0.3s ease;
 }
 
 /* Table styling */
 table {
   width: 100%;
-  border-collapse: collapse;
-  position: relative;
-  /* margin-top: 10px; */
-  font-size: 14px;
-  background-color: white;
+  border-collapse: separate; /* Allows for rounded corners */
+  border-spacing: 0;
+  padding: 0;
+  font-size: 15px; /* Slightly larger for readability */
+  font-family: 'Inter', 'Arial', sans-serif; /* Modern font stack */
+  background-color: #FFFFFF;
 }
 
 thead {
-  background-color: #334155;
-  color: white;
-  
+  background: linear-gradient(135deg, #4B5563 0%, #374151 100%); /* Subtle gradient for depth */
+  color: #FFFFFF;
 }
-/* Make the table header sticky */
+
 thead th {
   position: sticky;
   top: 0;
   z-index: 2; /* Ensure it stays above other content */
-  background-color: #334155; /* Match the header background color */
+  background-color: #3B82F6; /* Match the header background color */
   color: white; /* Ensure text remains visible */
+  border: none;
+  border-radius: 2px;
 }
+
 th, td {
-  padding: 12px;
+  padding: 14px 16px;
   text-align: left;
-  border: 1px solid #ddd;
+  border-bottom: 1px solid #E5E7EB; /* Light gray border for rows */
+  color: #1F2937;
+}
+
+th:first-child, td:first-child {
+  border-left: none;
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+tbody tr {
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #F7FAFC;
+  background-color: #FAFAFA;
 }
 
 tbody tr:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #F3F4F6; /* Slightly darker gray on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
 }
 
 /* Loading message styling */
 .loading-message {
   font-size: 16px;
-  color: #1E293B;
+  color: #1F2937;
+  background: #F7F7F7;
   text-align: center;
-  margin-top: 20px;
+  margin: 30px 0;
+  font-family: 'Inter', 'Arial', sans-serif;
 }
 
 /* Load More button styling */
 .load-more-button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #0D9488;
-  color: white;
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #38B2AC;
+  color: #FFFFFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 15px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .load-more-button:hover {
-  background-color: #2AB7A9;
+  background-color: #4FD1CB;
   transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
