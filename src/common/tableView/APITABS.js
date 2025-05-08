@@ -46,7 +46,7 @@ const APITabs = () => {
         ))}
       </div>
 
-      <div className="contentTab">
+      <div className="content">
         {/* Sidebar */}
         <div className="sidebar">
           <h3>{activeTab.toUpperCase()} APIs</h3>

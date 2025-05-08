@@ -29,7 +29,7 @@ const Table = ({ apiUrl, headers }) => {
   };
 
   return (
-    <div style={{ padding: '5px' }}>
+    <div>
       {loading ? (
         <p>Loading...</p>
       ) : apiUrl.includes('api-ninjas') ? (

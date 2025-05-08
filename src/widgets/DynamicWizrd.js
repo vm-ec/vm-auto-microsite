@@ -104,8 +104,8 @@ const DynamicWizrd = ({ getPreviousWidget, getNextWidget, workFlowData, activeWi
             <section className='step-info'>
                 <Row>
                     <Col>
-                        <Heading level={4}>{stepInfo.title}</Heading>
-                        <Text weight='bold' color="primary">{stepInfo.subTitle}</Text>
+                        {/* <Heading level={4}>{stepInfo.title}</Heading>
+                        <Text weight='bold' color="primary">{stepInfo.subTitle}</Text> */}
                     </Col>
                 </Row>
             </section>
