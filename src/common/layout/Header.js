@@ -5,7 +5,7 @@ const AppHeader = () => {
   return (
     <header className="header">
       {/* <div className='logo'> </div> */}
-      <h1 className="header-name">AutoRPF</h1>
+      <h1 className="header-name">AutoRFP</h1>
     </header>
   );
 };
