@@ -1,0 +1,11 @@
+{
+    "logo": "https://res.cloudinary.com/doosan-bobcat/image/upload/v1724088281/bobcat-assets/common/logos/svg/bobcat-company-official-logo.svg",
+    "primaryColor": "#ff3600",
+    "primaryColorHover": "#ff3600",
+    "secondaryColor": "#c45400",
+    "secondaryColorHover": "#b04900",
+    "headerColor": "#ff3600",
+    "borderColor": "#f69b82",
+    "cmsAPIEndPoint": "",
+    "BusinessAPIEndpoint": ""
+}

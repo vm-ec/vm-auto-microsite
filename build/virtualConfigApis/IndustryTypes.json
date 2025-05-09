@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Accounts",
+        "value": "accounts"
+    },
+    {
+        "label": "Retail",
+        "value": "retail"
+    },
+    {
+        "label": "Contractor",
+        "value": "contractor"
+    },
+    {
+        "label": "Music Store",
+        "value": "musicStore"
+    }
+]

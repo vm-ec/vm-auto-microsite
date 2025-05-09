@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "PersonalInformation",
+    "endpoint": "/virtualConfigApis/PersonalInformation.json"
+  },
+  {
+    "id": 2,
+    "name": "AboutBusiness",
+    "endpoint": "http://localhost:8075/get_about_business"
+  },
+  {
+    "id": 3,
+    "name": "UWQuestions",
+    "endpoint": "/virtualConfigApis/UWQuestionsModel.json"
+  },
+  {
+    "id": 4,
+    "name": "Quote",
+    "endpoint": "/virtualConfigApis/QuotesMockModel.json"
+  }
+]

@@ -1,0 +1,84 @@
+{
+    "title": "Tell us about your Personal Details.",
+    "fields": [
+      {
+        "label": "First Name",
+        "value": "",
+        "name": "firstName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,']",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Middle Name",
+        "value": "",
+        "name": "middleName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,#]",
+        "palceholder": "",
+        "component": "TextInput"
+      },
+      {
+        "label": "Last Name",
+        "value": "",
+        "name": "lastName",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z ,#]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+            "required": {
+              "value": true
+            }
+          }
+      },
+      {
+        "label": "Phone Number",
+        "value": "",
+        "name": "phonenumber",
+        "isValid": true,
+        "allowedFormat": "[0-9]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      },
+      {
+        "label": "Email",
+        "value": "",
+        "name": "email",
+        "isValid": true,
+        "allowedFormat": "[0-9A-Za-z.]",
+        "palceholder": "",
+        "component": "TextInput",
+        "validationRules": {
+          "required": {
+            "value": true
+          }
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Next",
+        "color": "primary",
+        "className": "space-3 space-left-0",
+        "onClickHandler": "handleNext"
+      }
+    ],
+    "externalValidation": {
+      "endpoint": "/mockdata/addressvalidation.json",
+      "inputParams": ["addressLine1", "addressLine2", "city", "state", "zipCode"],
+      "expectedOutput": true
+    }
+  }
+  

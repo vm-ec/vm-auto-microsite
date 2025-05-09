@@ -1,0 +1,236 @@
+{
+  "title": "Let's get more information.",
+  "fields": [
+    {
+      "label": "When do you want to start your policy?",
+      "value": "",
+      "name": "effectiveDate",
+      "isValid": true,
+      "type":"date",
+      "palceholder": "",
+      "component": "TextInput",
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    {
+      "label": "Do you, or will you at any time, subcontract any work or hire independent contractors?",
+      "value": "",
+      "name": "BOPHireContractor",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    {
+      "label": "Within the past five years, have you experienced more than one loss or claim involving your business or involving your business’ property, or was the payment of any claim or requested damage over $5,000?",
+      "value": "",
+      "name": "BOPLossesinFiveYears",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    {
+      "label": "Do owners and all employees live and work in the US and adhere to you & your company’s written policies, procedures, and expectations regarding hiring practices and duties?",
+      "value": "",
+      "name": "BOPAdhertoPolicies",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes"
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    {
+      "label": "What type of construction is the building?",
+      "value": "",
+      "name": "BOPTypeofBuilding",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Select",
+      "options": [
+        {
+          "label": "Frames Construction",
+          "value": "framesConstruction"
+        },
+        {
+          "label": "Joised masonry",
+          "value": "joisedMasonry"
+        },
+        {
+          "label": "Fire Resistive",
+          "value": "fireResistive"
+        },
+        {
+          "label": "Noncumbistible",
+          "value": "noncumbistible"
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    {
+      "label": "Does the building have an automatic sprinkler system?",
+      "value": "",
+      "name": "BOPSprinkerSystem",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes",
+          "childQuestion": {
+            "label": "Who is the manufacturer of the automatic sprinkler system?",
+            "value": "",
+            "name": "oemsprinkler",
+            "isValid": true,
+            "component": "TextInput",
+            "validationRules": {
+              "required": {
+                "value": true
+              }
+            }
+          }
+        },
+        {
+          "label": "No",
+          "value": "No",
+          "childQuestion": {
+            "label": "Do you have plans to setup an automatic sprinkler system?",
+            "value": "",
+            "name": "haveSprinkler",
+            "isValid": true,
+            "palceholder": "Website Name",
+            "component": "Radio",
+            "options":[
+              {
+                "label": "Yes",
+              "value": "Yes",
+              "childQuestion": {
+                "label": "Expected Installation Date?",
+                "value": "",
+                "name": "installationDate",
+                "isValid": true,
+                "type": "date",
+                "component": "TextInput",
+                "validationRules": {
+                  "required": {
+                    "value": true
+                  }
+                }
+              }
+            },
+              {
+                "label": "No",
+              "value": "No"
+            }
+            ],
+            "validationRules": {
+              "required": {
+                "value": true
+              }
+            }
+          }
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    },
+    
+    {
+      "label": "Does your business have a website?",
+      "value": "",
+      "name": "BOPWebsite",
+      "isValid": true,
+      "palceholder": "",
+      "component": "Radio",
+      "options": [
+        {
+          "label": "Yes",
+          "value": "Yes",
+          "childQuestion": {
+            "label": "Enter your website name",
+            "value": "",
+            "name": "BOPWebsiteName",
+            "isValid": true,
+            "palceholder": "Website Name",
+            "component": "TextInput",
+            "validationRules": {
+              "required": {
+                "value": true
+              }
+            }
+          }
+        },
+        {
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "validationRules": {
+        "required": {
+          "value": true
+        }
+      }
+    }
+  ],
+  "buttons": [
+   
+    {
+      "label": "Submit",
+      "color": "primary",
+      "className": "space-3 space-right-0",
+      "onClickHandler": "handleNext"
+    }
+  ]
+}

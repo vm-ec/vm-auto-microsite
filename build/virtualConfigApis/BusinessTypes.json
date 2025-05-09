@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Sole Proprietorship",
+        "value": "Sole Proprietorship"
+    },
+    {
+        "label": "Partnership",
+        "value": "Partnership"
+    },
+    {
+        "label": "Limited Partnership",
+        "value": "Limited Partnership"
+    },
+    {
+        "label": "Limited Liability Partnership",
+        "value": "Limited Liability Partnership"
+    }
+]
