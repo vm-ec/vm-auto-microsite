@@ -41,15 +41,17 @@ const Table = ({ apiUrl, headers }) => {
               <tr>
                 <th>ID</th>
                 <th>Name</th>
-                {apiUrl.includes('GetAllManufacturers') && <th>Manufacturer</th>}
+                {apiUrl.includes('getAllManufacturers') && <th>Manufacturer</th>}
+                {apiUrl.includes('getMakesForVehicle') && <th>Vehicle Type Name</th>}
               </tr>
             </thead>
             <tbody>
               {data.slice(0, visibleRows).map((item, index) => (
                 <tr key={item.Make_ID || item.Mfr_ID || index}>
-                  <td>{item.Make_ID || item.Mfr_ID || 'N/A'}</td>
-                  <td>{item.Make_Name || item.Mfr_CommonName || 'N/A'}</td>
-                  {apiUrl.includes('GetAllManufacturers') && <td>{item.Mfr_Name || 'N/A'}</td>}
+                  <td>{item.Make_ID || item.Mfr_ID || item.MakeId || item.Id}</td>
+                  <td>{item.Make_Name || item.Mfr_CommonName || item.MakeName || item.Name}</td>
+                  {apiUrl.includes('getAllManufacturers') && <td>{item.Mfr_Name || 'N/A'}</td>}
+                  {apiUrl.includes('getMakesForVehicle') && <td>{item.VehicleTypeName || 'N/A'}</td>}
                 </tr>
               ))}
             </tbody>

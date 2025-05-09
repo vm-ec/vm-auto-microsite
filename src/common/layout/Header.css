@@ -27,3 +27,21 @@
   margin: 0;
   padding-left: 15px; /* Add spacing from the left edge */
 }
+.login-button {
+  background-color: #2563EB; /* Blue background */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', 'Arial', sans-serif;
+  cursor: pointer;
+  margin-left: auto;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #1E40AF; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}

@@ -10,13 +10,20 @@ const APITabs = () => {
   // Define tabs and their respective APIs
   const tabs = {
     nhtsa: [
-      { name: 'Get All Makes', url: 'https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json' },
-      { name: 'Get Makes for Manufacturer', url: 'https://vpic.nhtsa.dot.gov/api/vehicles/GetAllManufacturers?format=json&page=2' },
+      { name: 'Get All Makes', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getAllMakes' },
+      { name: 'Get Makes for Manufacturer', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getAllManufacturers' },
+      { name: 'Get Makes for Vehicle', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getMakesForVehicle' },
+      { name: 'Get WMIs For Manufacturer', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getWMIsForManufacturer/hon' },
     ],
     apiNinjas: [
-        { name: 'Get Cars by Model (Camry)', url: 'https://api.api-ninjas.com/v1/cars?model=camry' },
-      ],
+      { name: 'Get Cars by Model (Camry)', url: 'https://api.api-ninjas.com/v1/cars?model=camry' },
+    ],
+    carMax: [], // Placeholder for carMax
+    Kbb: [], // Placeholder for Kbb
+    FIpe: [], // Placeholder for FIpe
+    OEM: [], // Placeholder for OEM
   };
+
   const handleApiSelection = (api) => {
     setSelectedAPI(api.url);
     if (activeTab === 'apiNinjas') {
@@ -27,48 +34,59 @@ const APITabs = () => {
       setHeaders({});
     }
   };
-  return (
-    <div className="api-tabs-container">
-      {/* Tabs */}
-      <div className="tabs">
-        {Object.keys(tabs).map((tab) => (
-          <button
-            key={tab}
-            className={`tab-button ${activeTab === tab ? 'active' : ''}`}
-            onClick={() => {
-              setActiveTab(tab);
-              setSelectedAPI(null); // Reset selected API when switching tabs
-              setHeaders({}); 
-            }}
-          >
-            {tab.toUpperCase()}
-          </button>
-        ))}
-      </div>
 
-      <div className="content">
-        {/* Sidebar */}
-        <div className="sidebar">
-          <h3>{activeTab.toUpperCase()} APIs</h3>
-          <ul>
-            {tabs[activeTab].map((api, index) => (
-                <button
-                  className={`api-button ${selectedAPI === api.url ? 'selected' : ''}`}
-                  onClick={() => handleApiSelection(api)}
-                >
-                  {api.name}
-                </button>
-            ))}
-          </ul>
+  return (
+    <div className="api-tabs">
+      <div className="api-tabs-container">
+        {/* Tabs */}
+        <div className="tabs">
+          {Object.keys(tabs).map((tab) => (
+            <button
+              key={tab}
+              className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => {
+                setActiveTab(tab);
+                setSelectedAPI(null); // Reset selected API when switching tabs
+                setHeaders({});
+              }}
+            >
+              {tab.toUpperCase()}
+            </button>
+          ))}
         </div>
 
-        {/* Content Area */}
-        <div className="content-area">
-          {selectedAPI ? (
-            <Table apiUrl={selectedAPI} headers={headers} />
-          ) : (
-            <p>Select an API from the sidebar to view its data.</p>
-          )}
+        <div className="content">
+          {/* Sidebar */}
+          <div className="sidebar-container">
+            {tabs[activeTab].length > 0 ? (
+              <ul>
+                {tabs[activeTab].map((api, index) => (
+                  <button
+                    key={index}
+                    className={`api-button ${selectedAPI === api.url ? 'selected' : ''}`}
+                    onClick={() => handleApiSelection(api)}
+                  >
+                    {api.name}
+                  </button>
+                ))}
+              </ul>
+            ) : (
+              <p className="placeholder-sidebar">No APIs available for this tab.</p>
+            )}
+          </div>
+
+          {/* Content Area */}
+          <div className="content-area">
+            {tabs[activeTab].length > 0 ? (
+              selectedAPI ? (
+                <Table apiUrl={selectedAPI} headers={headers} />
+              ) : (
+                <p>Select an API from the sidebar to view its data.</p>
+              )
+            ) : (
+              <p className="placeholder">This tab is under development. Please check back later.</p>
+            )}
+          </div>
         </div>
       </div>
     </div>

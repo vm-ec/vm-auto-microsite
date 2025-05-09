@@ -32,7 +32,6 @@ thead th {
   background-color: #3B82F6; /* Match the header background color */
   color: white; /* Ensure text remains visible */
   border: none;
-  border-radius: 2px;
 }
 
 th, td {
