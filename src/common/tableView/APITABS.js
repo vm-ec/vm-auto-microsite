@@ -10,17 +10,21 @@ const APITabs = () => {
   // Define tabs and their respective APIs
   const tabs = {
     nhtsa: [
-      { name: 'Get All Makes', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getAllMakes' },
-      { name: 'Get Makes for Manufacturer', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getAllManufacturers' },
-      { name: 'Get Makes for Vehicle', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getMakesForVehicle' },
-      { name: 'Get WMIs For Manufacturer', url: 'https://blooming-retreat-61297-cbf936552597.herokuapp.com/api/getWMIsForManufacturer/hon' },
+      { name: 'Get All Makes', url: 'https://vm-nhtsa.onrender.com/api/getAllMakes' },
+      { name: 'Get Makes for Manufacturer', url: 'https://vm-nhtsa.onrender.com/api/getAllManufacturers' },
+      { name: 'Get Makes for Vehicle', url: 'https://vm-nhtsa.onrender.com/api/getMakesForVehicle' },
+      { name: 'Get WMIs For Manufacturer', url: 'https://vm-nhtsa.onrender.com/api/getWMIsForManufacturer/hon' },
     ],
     apiNinjas: [
       { name: 'Get Cars by Model (Camry)', url: 'https://api.api-ninjas.com/v1/cars?model=camry' },
     ],
+    FIpe: [
+      { name: 'Get Brands', url: '' },
+      { name: 'Get Models', url: '' },
+      { name: 'Get Years', url: '' },
+    ],
     carMax: [], // Placeholder for carMax
     Kbb: [], // Placeholder for Kbb
-    FIpe: [], // Placeholder for FIpe
     OEM: [], // Placeholder for OEM
   };
 
@@ -63,7 +67,7 @@ const APITabs = () => {
                 {tabs[activeTab].map((api, index) => (
                   <button
                     key={index}
-                    className={`api-button ${selectedAPI === api.url ? 'selected' : ''}`}
+                   className={`api-button ${selectedAPI === api.url ? 'selected' : ''}`}
                     onClick={() => handleApiSelection(api)}
                   >
                     {api.name}

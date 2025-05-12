@@ -28,7 +28,7 @@
   padding-left: 15px; /* Add spacing from the left edge */
 }
 .login-button {
-  background-color: #2563EB; /* Blue background */
+  background-color: #009688; /* Blue background */
   color: #FFFFFF; /* White text */
   border: none;
   border-radius: 8px;
@@ -42,6 +42,6 @@
 }
 
 .login-button:hover {
-  background-color: #1E40AF; /* Darker blue on hover */
+  background-color: #00796B; /* Darker blue on hover */
   transform: scale(1.05); /* Slight zoom effect */
 }
