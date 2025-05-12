@@ -18,10 +18,10 @@ const APITabs = () => {
     apiNinjas: [
       { name: 'Get Cars by Model (Camry)', url: 'https://api.api-ninjas.com/v1/cars?model=camry' },
     ],
-    FIpe: [
-      { name: 'Get Brands', url: '' },
-      { name: 'Get Models', url: '' },
-      { name: 'Get Years', url: '' },
+    Fipe: [
+      { name: 'Get Brands', url: 'https://vm-fipe.onrender.com/api/getBrands' },
+      { name: 'Get Models', url: 'https://vm-fipe.onrender.com/api/getModels' },
+      { name: 'Get Years', url: 'https://vm-fipe.onrender.com/api/getYears' },
     ],
     carMax: [], // Placeholder for carMax
     Kbb: [], // Placeholder for Kbb

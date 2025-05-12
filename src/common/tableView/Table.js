@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ApiNinjasTable from './ApiNinjas'; // Import the new component
+import FipeTable from './Fipe'; // Import the Fipe component
 import './table.css';
 
 const Table = ({ apiUrl, headers }) => {
@@ -34,6 +35,8 @@ const Table = ({ apiUrl, headers }) => {
         <p>Loading...</p>
       ) : apiUrl.includes('api-ninjas') ? (
         <ApiNinjasTable data={data} visibleRows={visibleRows} handleLoadMore={handleLoadMore} />
+      ) : apiUrl.includes('vm-fipe') ? (
+        <FipeTable data={data} visibleRows={visibleRows} handleLoadMore={handleLoadMore} />
       ) : (
         <>
           <table>
