@@ -28,6 +28,7 @@ const APITabs = () => {
     OEM: [], // Placeholder for OEM
   };
 
+
   const handleApiSelection = (api) => {
     setSelectedAPI(api.url);
     if (activeTab === 'apiNinjas') {
@@ -39,7 +40,26 @@ const APITabs = () => {
     }
   };
 
+
   return (
+    <div className="api-tabs">
+      <div className="api-tabs-container">
+        {/* Tabs */}
+        <div className="tabs">
+          {Object.keys(tabs).map((tab) => (
+            <button
+              key={tab}
+              className={`tab-button ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => {
+                setActiveTab(tab);
+                setSelectedAPI(null); // Reset selected API when switching tabs
+                setHeaders({});
+              }}
+            >
+              {tab.toUpperCase()}
+            </button>
+          ))}
+        </div>
     <div className="api-tabs">
       <div className="api-tabs-container">
         {/* Tabs */}
@@ -79,6 +99,18 @@ const APITabs = () => {
             )}
           </div>
 
+          {/* Content Area */}
+          <div className="content-area">
+            {tabs[activeTab].length > 0 ? (
+              selectedAPI ? (
+                <Table apiUrl={selectedAPI} headers={headers} />
+              ) : (
+                <p>Select an API from the sidebar to view its data.</p>
+              )
+            ) : (
+              <p className="placeholder">This tab is under development. Please check back later.</p>
+            )}
+          </div>
           {/* Content Area */}
           <div className="content-area">
             {tabs[activeTab].length > 0 ? (
