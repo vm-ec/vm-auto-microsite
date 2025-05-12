@@ -3,11 +3,6 @@
   background: #F7F7F7;
 }
 
-.api-tabs {
-  width: 100vw;
-  background: #F7F7F7;
-}
-
 .api-tabs-container {
 
   display: flex;
@@ -27,9 +22,6 @@
   display: flex;
   /* Subtle gradient */
   padding: 0px 15px 15px 230px;
-
-  padding: 0px 15px 15px 230px;
-
   /* border-bottom: 2px solid #D1D5DB; */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
@@ -38,10 +30,7 @@
   /* margin-right: 12px; */
   /* margin-right: 12px; */
   padding: 12px 24px;
-
-
   border: none;
-  background-color: #b2dfdb;
   background-color: #b2dfdb;
   color: #1976d2;
   cursor: pointer;
@@ -63,18 +52,7 @@
   border-bottom-right-radius: 8px;
 }
 
-.tab-button:first-child {
-  border-bottom-left-radius: 8px;
-}
-
-/* Add border-radius to the last button */
-.tab-button:last-child {
-  border-bottom-right-radius: 8px;
-}
-
 .tab-button.active {
-  background-color: #F7F7F7;
-  color: #1976d2;
   background-color: #F7F7F7;
   color: #1976d2;
   font-weight: 600;
@@ -82,8 +60,6 @@
 }
 
 .tab-button:hover {
-  background-color: #F7F7F7;
-  color: #1976d2;
   background-color: #F7F7F7;
   color: #1976d2;
   transform: scale(1.05);
@@ -116,15 +92,12 @@
   margin-bottom: 12px;
   border: none;
   background-color: #b2dfdb;
-  background-color: #b2dfdb;
   cursor: pointer;
   border-radius: 8px;
   text-align: left;
   font-size: 15px;
   font-weight: 500;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #1976d2;
   color: #1976d2;
   transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -132,16 +105,11 @@
 
 .api-button.selected {
   background-color: #E0E0E0;
- border: 1px solid #cbcfd8;
- transform: scale(0.95);
-  background-color: #E0E0E0;
- border: 1px solid #cbcfd8;
- transform: scale(0.95);
+  border: 1px solid #cbcfd8;
+  transform: scale(0.95);
 }
 
 .api-button:hover {
-  background-color: #E0E0E0;
-  color: #1976d2;
   background-color: #E0E0E0;
   color: #1976d2;
   transform: scale(1.03);
@@ -201,6 +169,7 @@
   padding-right: 0;
   margin-right: 0;
 }
+
 .sidebar-title {
   font-size: 18px;
   color: #1F2937;
