@@ -64,6 +64,7 @@ const APITabs = () => {
         <div className="content">
           {/* Sidebar */}
           <div className="sidebar-container">
+            <h2 className="sidebar-title">List of API's</h2>
             {tabs[activeTab].length > 0 ? (
               <ul>
                 {tabs[activeTab].map((api, index) => (
