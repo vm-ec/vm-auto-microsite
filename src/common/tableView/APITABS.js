@@ -28,6 +28,7 @@ const APITabs = () => {
     OEM: [], // Placeholder for OEM
   };
 
+
   const handleApiSelection = (api) => {
     setSelectedAPI(api.url);
     if (activeTab === 'apiNinjas') {
@@ -38,6 +39,7 @@ const APITabs = () => {
       setHeaders({});
     }
   };
+
 
   return (
     <div className="api-tabs">
@@ -78,7 +80,6 @@ const APITabs = () => {
               <p className="placeholder-sidebar">No APIs available for this tab.</p>
             )}
           </div>
-
           {/* Content Area */}
           <div className="content-area">
             {tabs[activeTab].length > 0 ? (
