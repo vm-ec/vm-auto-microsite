@@ -92,6 +92,18 @@ const APITabs = () => {
               <p className="placeholder">This tab is under development. Please check back later.</p>
             )}
           </div>
+          {/* Content Area */}
+          <div className="content-area">
+            {tabs[activeTab].length > 0 ? (
+              selectedAPI ? (
+                <Table apiUrl={selectedAPI} headers={headers} />
+              ) : (
+                <p>Select an API from the sidebar to view its data.</p>
+              )
+            ) : (
+              <p className="placeholder">This tab is under development. Please check back later.</p>
+            )}
+          </div>
         </div>
       </div>
     </div>
