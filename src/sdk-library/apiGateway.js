@@ -2,7 +2,9 @@ import axios from 'axios';
 
 // Base configuration for the Axios instance
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:3007', // Set your base URL here
+  // baseURL: 'http://localhost:3007',
+  //  // Set your base URL here
+  baseURL: 'https://autorfp-server-beql.onrender.com', // Replace with your actual API base URL
   timeout: 30000, // Request timeout
   headers: {
     'Content-Type': 'application/json',
